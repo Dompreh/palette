@@ -136,11 +136,28 @@ export const colors =[
       {
         name: "Absinthe",
         hex: "#C6D530",
-        description: "Absinthe was originally valued both for its striking emerald-green hue and its medicinal properties, used as a tonic and to ward off illnesses like malaria. However, over time, people began abusing it recreationally, leading to widespread addiction and moral panic. It became a symbol of artistic rebellion and social upheaval, embedding itself deeply in cultural history. Artist who used it: Vincent Van Gogh "
+        description: "Absinthe was originally valued both for its striking emerald-green hue and its medicinal properties, used as a tonic and to ward off illnesses like malaria. However, over time, people began abusing it recreationally, leading to widespread addiction and moral panic. It became a symbol of artistic rebellion and social upheaval, embedding itself deeply in cultural history. Artist who used it: Vincent Van Gogh. "
       },
       {
         name: "Emerald",
         hex: "#008059",
         description: "Emeralds shine green thanks to tiny traces of chromium or vanadium, two rare elements that turn a plain mineral into something priceless. Emerald green isn’t just a color, it’s a symbol of human obsession. From Nero’s gladiator goggles to a $400 million gem tangled in lawsuits and legends. "
       },
+      {
+        name: "Scheele's Green",
+        hex: "#1E9634",
+        description: "Scheele’s Green was born from poison. It was made by mixing copper and arsenic,giving the world its most dazzling green and a deadly interior design trend. This color killed with style. By the 1850s, it dyed wallpapers, dresses, and fake flowers and also slowly poisoned people in ballrooms, bedrooms, and even hospital wards. Artist who used it: J.M.W. Turner."
+      },
+      {
+        name: "Terre	verte",
+        hex: "#778166",
+        description: "Terre verte was the friend-zoned pigment of Renaissance art. Artists didn’t love terre verte they tolerated it. It didn’t kill you, it didn’t clash, and it was oddly perfect for painting human skin. That was enough. Artist who used it: Cennino Cennini."
+      },
+      
+      {
+        name: "Avocado",
+        hex: "#99A13E",
+        description: "After a crude oil spill turned California beaches black, avocado green turned everyone’s kitchens green. It became the color of conscience (linked to caring about the environment), If your fridge wasn’t green, people thought you didn’t care about the planet at all."
+      },
+   
 ]

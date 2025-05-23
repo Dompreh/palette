@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Cinzel } from "next/font/google";
 
 const cinzel = Cinzel({
@@ -6,18 +7,18 @@ const cinzel = Cinzel({
   subsets: ["latin"],
   variable: "--font-cinzel",
   display: "swap",
-
 });
 
-function Header() {
+function Header({ page }: { page: string }) {
   return (
     <header className="w-full max-w-4xl text-center mb-12">
-      <h1
-        className={`text-5xl ${cinzel.className}  tracking-wide font-bold`}
+      <Link
+        href={`${page}`}
+        className={`inline-block ${cinzel.className}  hover:opacity-80 transition-opacity`}
         suppressHydrationWarning
       >
-        Palette
-      </h1>
+        <h1 className={`text-5xl  tracking-wide font-bold`}>Palette</h1>
+      </Link>
     </header>
   );
 }

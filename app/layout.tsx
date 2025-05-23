@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Cinzel} from "next/font/google";
+import { Inter, Cinzel } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -13,7 +13,6 @@ const cinzel = Cinzel({
   subsets: ["latin"],
   variable: "--font-cinzel",
   display: "swap",
-
 });
 
 export const metadata: Metadata = {
@@ -28,7 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${cinzel.variable}`}>
       <body className={inter.className} suppressHydrationWarning>
-        {children}
+        <main className="min-h-screen bg-white flex flex-col items-center px-4 py-8">
+          {children}
+        </main>
         <Toaster />
       </body>
     </html>
