@@ -159,5 +159,30 @@ export const colors =[
         hex: "#99A13E",
         description: "After a crude oil spill turned California beaches black, avocado green turned everyone’s kitchens green. It became the color of conscience (linked to caring about the environment), If your fridge wasn’t green, people thought you didn’t care about the planet at all."
       },
+      {
+        name: "Obsidian",
+        hex: "#30382D",
+        description: "Obsidian is lava that froze so fast it became a mirror. A shiny, jet black glass born of fire and ice, once believed to show the spirit world. To some, it was a portal for angels and demons, a black mirror used by wizards and feared by witch hunters, blending science, sorcery, and shadow."
+      },
+      {
+        name: "Payne’s gray",
+        hex: "#383B4A",
+        description: " Payne’s Gray replaced harsh blacks and was used for the fog in your landscape painting, a moody mix of blue, ocher, and crimson that makes faraway hills look soft and real. It’s the go-to color when you want your painting to look mysterious, distant and give a more atmospheric shadow.Artist who used it: William Payne."
+      },
+      {
+        name: "Mummy",
+        hex: "#925237",
+        description: "Painters once used dead pharaohs to shade your skin tones. Mummy Brown was made by grinding up actual Egyptian mummies, yes, human remains into a rich, translucent pigment loved for its shadowy glow. It looked great on canvas, but felt wrong in the gut. Once artists realized the paint came from real bodies, the color’s popularity died. Artist who used it: Eugène Delacroix, Martin Drölling, Sir William Beechey, Edward Burne-Jones."
+      },
+      {
+        name: "Umber",
+        hex: "#866731",
+        description: "It’s the pigment equivalent of a brooding genius. Cheap, dark, and moody, umber quietly helped paint history’s most powerful scenes, no spotlight needed, just shadows. This muddy brown was the go-to for artists like Rembrandt and Caravaggio who wanted drama, grit, and biblical level mood. Artist who used it: Michelangelo Merisi Caravaggio, Rembrandt Van Rijn, Joseph Wright."
+      },
+      {
+        name: "Sepia",
+        hex: "#836855",
+        description: "Sepia is squid ink with a soul. From da Vinci’s delicate sketches to Roman poets’ biting wit, this moody brown carried both genius and sarcasm across parchment for centuries.It’s the color of nostalgia. Sepia doesn’t just tint drawings,it time travels photos, giving modern memories the warm, worn glow of a hundred years ago. Artist who used it:Leonardo Da Vinci."
+      },
    
 ]
