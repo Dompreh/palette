@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Tooltip,
   TooltipContent,
@@ -20,10 +20,35 @@ function Palette() {
   const [loading, setLoading] = useState(false);
   const [count, setCount] = useState(18);
   const [recent, setRecent] = useState<Color[]>([]);
+  const [openTooltip, setOpenTooltip] = useState<string | null>(null);
+  const isMobile = useRef(false);
+
 
   useEffect(() => {
     setRecent(colors);
   }, []);
+
+  useEffect(() => {
+    // Detect mobile once on mount
+    isMobile.current = window.innerWidth < 768;
+
+    // Close tooltip on outside click (mobile only)
+    const handleClickOutside = (e: MouseEvent) => {
+      if (openTooltip) {
+        setOpenTooltip(null);
+      }
+    };
+
+    if (isMobile.current) {
+      document.addEventListener("click", handleClickOutside);
+    }
+
+    return () => {
+      if (isMobile.current) {
+        document.removeEventListener("click", handleClickOutside);
+      }
+    };
+  }, [openTooltip]);
 
   const copyToClipboard = (hex: string) => {
     navigator.clipboard.writeText(hex);
@@ -41,6 +66,18 @@ function Palette() {
   const visibleColors = recent.slice(0, count);
 
   const hasMoreColors = count < recent?.length;
+  
+  const handleClick = (
+    e: React.MouseEvent,
+    color: Color
+  ) => {
+    e.stopPropagation(); // Prevent global click from closing it
+    copyToClipboard(color.hex);
+
+    if (isMobile.current) {
+      setOpenTooltip((prev) => (prev === color.name ? null : color.name));
+    }
+  };
 
   return (
     <>
@@ -55,11 +92,13 @@ function Palette() {
         <TooltipProvider>
           {visibleColors.map((color) => (
             <div key={color.name} className="flex flex-col items-center">
-              <Tooltip defaultOpen={false}>
+              <Tooltip  open={isMobile.current ? openTooltip === color.name : undefined}>
                 <TooltipTrigger asChild>
-                  <div className="relative">
+                  <div
+                    className="relative"
+                  >
                     <button
-                      onClick={() => copyToClipboard(color.hex)}
+                     onClick={(e) => handleClick(e, color)}
                       className="pen-shape w-64 transition-transform hover:scale-101 focus:outline-none"
                       style={{
                         backgroundColor: color.hex,
