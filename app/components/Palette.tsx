@@ -28,6 +28,7 @@ function Palette() {
     setRecent(colors);
   }, []);
 
+
   useEffect(() => {
     // Detect mobile once on mount
     isMobile.current = window.innerWidth < 768;
@@ -110,7 +111,7 @@ function Palette() {
                 </TooltipTrigger>
                 <TooltipContent
                   side="top"
-                  className="max-w-md text-sm p-3 bg-white shadow-lg border border-gray-200"
+                  className="max-w-xs sm:max-w-md text-sm p-3 bg-white shadow-lg border border-gray-200"
                 >
                   <p className="text-gray-700">{color.description}</p>
                 </TooltipContent>
